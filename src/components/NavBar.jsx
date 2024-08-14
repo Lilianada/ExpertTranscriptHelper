@@ -12,6 +12,7 @@ const sections = [
   { id: 'how-it-works', title: 'How It Works' },
   { id: 'why-choose-us', title: 'Why Choose Us' },
   { id: 'packages', title: 'Packages' },
+  { id: 'faqs', title: 'Faqs' },
   { id: 'contact', title: 'Contact' },
 ]
 
@@ -152,10 +153,7 @@ export function NavBar() {
           className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-base font-medium text-slate-900 [counter-reset:section]"
         >
           <li className="flex items-center [counter-increment:section]">
-            <a
-              href='/'
-              className='px-4 py-2'
-            >
+            <a href="/" className="px-4 py-2">
               <Image
                 src={logo}
                 alt=""

@@ -14,7 +14,7 @@ export default function Contact() {
     >
       <Container>
         <SectionHeading
-          number="6"
+          number="7"
           id="accredited-schools-title"
           className="mt-16 mb-8"
         >

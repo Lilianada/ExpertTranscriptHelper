@@ -8,6 +8,7 @@ import { AccreditedSchools } from '@/components/AccreditedSchools'
 import Contact from '@/components/Contact'
 import YoutubeSection from '@/components/YoutubeSection'
 import AboutUs from '@/components/AboutUs'
+import Faq from '@/components/Faq'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <HowItWorks />
       <WhyChooseUs />
       <Packages />
+      <Faq />
       <Contact />
       <Footer />
     </>
