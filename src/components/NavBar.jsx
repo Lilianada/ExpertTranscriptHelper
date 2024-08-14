@@ -84,7 +84,7 @@ export function NavBar() {
 
   return (
     <div ref={navBarRef} className="sticky top-0 z-50">
-      <Popover className="min-[900px]:hidden">
+      <Popover className="lg:hidden">
         {({ open }) => (
           <>
             <div
@@ -147,7 +147,7 @@ export function NavBar() {
           </>
         )}
       </Popover>
-      <div className="hidden min-[900px]:flex min-[900px]:h-20 min-[900px]:justify-center min-[900px]:border-b min-[900px]:border-slate-200 min-[900px]:bg-white/95 min-[900px]:[@supports(backdrop-filter:blur(0))]:bg-white/80 min-[900px]:[@supports(backdrop-filter:blur(0))]:backdrop-blur">
+      <div className="hidden lg:flex lg:h-20 lg:justify-center lg:border-b lg:border-slate-200 lg:bg-white/95 lg:[@supports(backdrop-filter:blur(0))]:bg-white/80 lg:[@supports(backdrop-filter:blur(0))]:backdrop-blur">
         <ol
           role="list"
           className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-base font-medium text-slate-900 [counter-reset:section]"
