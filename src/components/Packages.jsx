@@ -128,7 +128,7 @@ export function Packages() {
                 </ul>
               </div>
               <a
-                href={tier.href}
+                href={`/api/redirect?planName=${encodeURIComponent(tier.name)}`}
                 aria-describedby={tier.id}
                 className={classNames(
                   tier.mostPopular

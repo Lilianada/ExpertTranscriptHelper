@@ -84,7 +84,7 @@ export function NavBar() {
 
   return (
     <div ref={navBarRef} className="sticky top-0 z-50">
-      <Popover className="lg:hidden">
+      <Popover className="md:block lg:hidden">
         {({ open }) => (
           <>
             <div
@@ -122,6 +122,7 @@ export function NavBar() {
                 )}
                 <MenuIcon open={open} className="h-6 w-6 stroke-slate-700" />
               </Popover.Button>
+              
             </div>
             <Popover.Panel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur">
               {sections.map((section, sectionIndex) => (
