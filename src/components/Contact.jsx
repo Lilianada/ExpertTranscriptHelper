@@ -93,7 +93,7 @@ export default function Contact() {
                   <dt className="flex-none">
                     <span className="sr-only">Whatsapp</span>
                     <FaWhatsapp
-                      className="h-6 w-6 text-gray-400"
+                      className="h-6 w-6 text-gray-400" />
                     <span className="sr-only">WhatsApp</span>
                     <PhoneIcon
                       className="h-7 w-6 text-gray-400"
