@@ -58,14 +58,19 @@ export default function Hero() {
           <div className="mx-auto max-w-7xl px-6 pb-20 pt-12  lg:px-8 ">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="relative w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
-                <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl font-display">
+                <h1 className="text-5xl font-bold tracking-tight text-gray-900 sm:text-6xl font-display">
                   Ready to Accelerate Your Degree Pathway?
                 </h1>
                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                  Get a head start on your academic journey with us --Fast-track
+                  Get a head start on your academic journey with us. Fast-track
                   your degree with ACE accredited credits.
                 </p>
-                <div className="mt-10 flex items-center gap-x-6">
+                <div className="mt-4">
+                  <p className="text-lg leading-8 text-gray-600">
+                    Trusted by <b className="text-indigo-600">500+</b> students across the world.
+                  </p>
+                </div>
+                <div className="mt-6 flex items-center gap-x-6">
                   <a
                     href="#contact"
                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
@@ -73,20 +78,11 @@ export default function Hero() {
                     Get started
                   </a>
                   <a
-                    href="#pricing"
+                    href="#packages"
                     className="text-sm font-semibold leading-6 text-gray-900"
                   >
                     Pick a package <span aria-hidden="true">→</span>
                   </a>
-                </div>
-                <div className="mt-6">
-                  <p className="text-lg leading-8 text-gray-600">
-                    Trusted by <b className="text-indigo-600">500+</b> students
-                  </p>
-                  <p className="mt-2 text-wrap text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                    Choose expert professionals specially trained to take each
-                    exam to help you get your degree.
-                  </p>
                 </div>
               </div>
               <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">

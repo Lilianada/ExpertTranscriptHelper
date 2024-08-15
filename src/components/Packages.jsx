@@ -17,7 +17,7 @@ const tiers = [
       '7-day standard processing time',
       'Includes professional certificates',
       'Includes monthly coursera subscription fee',
-      'Waiver of transfer fee for UoP',
+      'Waiver of transfer fee for University of the People',
     ],
     mostPopular: false,
   },
@@ -30,7 +30,7 @@ const tiers = [
         '30 credits from coursera plus unlimited credits through sophia-saylor.com',
         'Starting at 7 days',
         'Includes monthly sophia learning subscription fee',
-        'Waiver of transfer fee for UoP',
+        'Waiver of transfer fee for University of the People',
     ],
     mostPopular: false,
   },
@@ -43,7 +43,7 @@ const tiers = [
         '90 credits, including Electives, Main, and General Credits',
         'Standard 14 days, may vary depending on credit requirements',
         'Includes professional certification',
-        'Waiver of transfer fee for UoP',
+        'Waiver of transfer fee for University of the People',
     ],
     mostPopular: false,
   },
@@ -55,23 +55,23 @@ function classNames(...classes) {
 }
 
 
-export function Pricing() {
+export function Packages() {
   return (
     <section
-      id="pricing"
-      aria-labelledby="pricing-title"
+      id="packages"
+      aria-labelledby="packages-title"
       className="scroll-mt-14 pb-8 pt-16 sm:scroll-mt-32 sm:pb-10 sm:pt-20 lg:pb-16 lg:pt-32"
     >
       <Container>
-        <SectionHeading number="4" id="pricing-title">
-          Pricing
+        <SectionHeading number="5" id="packages-title">
+          Packages
         </SectionHeading>
-        <p className="mt-8 font-display text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl">
+        <p className="mt-8 font-display text-4xl font-bold tracking-tight text-slate-900">
           Pick your package
         </p>
-        <p className="mt-4 max-w-xl text-lg tracking-tight text-slate-600">
+        <h2 className="mt-4 max-w-xl text-lg tracking-tight text-slate-600">
           Choose the plan that best suits your needs and budget. We offer a range of packages to help you accelerate your degree pathway.
-        </p>
+        </h2>
       </Container>
       <div className="isolate mx-auto mt-8 grid max-w-md grid-cols-1 gap-y-8 sm:mt-12 lg:mx-0 lg:max-w-none lg:grid-cols-3 lg:px-8">
           {tiers.map((tier, tierIdx) => (
@@ -129,15 +129,16 @@ export function Pricing() {
               </div>
               <a
                 href={`/api/redirect?planName=${encodeURIComponent(tier.name)}`}
-                className={clsx(
+                aria-describedby={tier.id}
+                className={classNames(
                   tier.mostPopular
                     ? 'bg-indigo-600 text-white shadow-sm hover:bg-indigo-500'
                     : 'text-indigo-600 ring-1 ring-inset ring-indigo-200 hover:ring-indigo-300',
-                  'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                  'mt-8 block rounded-md px-3 py-2 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600',
                 )}
               >
-                Buy plan
-            </a>
+                Pick plan
+              </a>
             </div>
           ))}
         </div>

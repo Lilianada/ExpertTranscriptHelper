@@ -1,24 +1,27 @@
-import { Author } from '@/components/Author'
 import { Footer } from '@/components/Footer'
-import { ContactUs } from '@/components/ContactUs'
 import Hero from '@/components/Hero'
 import { NavBar } from '@/components/NavBar'
-import { Pricing } from '@/components/Pricing'
+import { Packages } from '@/components/Packages'
 import { WhyChooseUs } from '@/components/WhyChooseUs'
-import { Screencasts } from '@/components/Screencasts'
+import { HowItWorks } from '@/components/HowItWorks'
 import { AccreditedSchools } from '@/components/AccreditedSchools'
 import Contact from '@/components/Contact'
+import YoutubeSection from '@/components/YoutubeSection'
+import AboutUs from '@/components/AboutUs'
+import Faq from '@/components/Faq'
 
 export default function Home() {
   return (
     <>
-     
       <NavBar />
       <Hero />
+      <AboutUs />
+      <YoutubeSection />
       <AccreditedSchools />
-      <Screencasts />
+      <HowItWorks />
       <WhyChooseUs />
-      <Pricing />
+      <Packages />
+      <Faq />
       <Contact />
       <Footer />
     </>

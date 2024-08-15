@@ -1,12 +1,9 @@
 'use client'
 
 import {
-  BuildingOffice2Icon,
   ChatBubbleLeftEllipsisIcon,
-  EnvelopeIcon,
-  PhoneIcon,
 } from '@heroicons/react/24/outline'
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from 'react-icons/fa'
 import { SectionHeading } from './SectionHeading'
 import { Container } from './Container'
 import { useState } from 'react'
@@ -49,14 +46,14 @@ export default function Contact() {
     >
       <Container>
         <SectionHeading
-          number="5"
+          number="7"
           id="accredited-schools-title"
-          className="mt-16"
+          className="mt-16 mb-8"
         >
           Contact Us
         </SectionHeading>
-        <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
-          <div className="relative px-6 pb-20 pt-24 lg:static lg:px-8 lg:py-30">
+        <div className="mx-auto grid max-w7xl grid-cols-1 lg:grid-cols-2">
+          <div className="lg:py-30 relative px-6 pb-20 pt-24 lg:static lg:px-8">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
               <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden bg-gray-100 ring-1 ring-gray-900/10 lg:w-1/2">
                 <svg
@@ -127,10 +124,6 @@ export default function Contact() {
                     <FaWhatsapp
                       className="h-6 w-6 text-gray-400" />
                     <span className="sr-only">WhatsApp</span>
-                    <PhoneIcon
-                      className="h-7 w-6 text-gray-400"
-                      aria-hidden="true"
-                    />
                   </dt>
                   <dd>
                     <a

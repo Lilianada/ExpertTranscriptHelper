@@ -10,9 +10,10 @@ const inter = Inter({
 })
 
 export const metadata = {
-  title: 'Everything Starts as a Square - Get lost in the world of icon design',
+  title: 'ExpertTranscriptHelper | Earn UoPeople Credits',
   description:
-    'A book and video course that teaches you how to design your own icons from scratch.',
+    'Let us take your Sophia Learning and Coursera courses for you. ExpertTranscriptHelper provides a streamlined process for busy adults.',
+    keywords: 'transcript help, UoPeople credits, online learning assistance',
 }
 
 export default function RootLayout({ children }) {
@@ -25,6 +26,13 @@ export default function RootLayout({ children }) {
       )}
     >
       <head>
+        <title>{metadata.title}</title> 
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta property="og:url" content="https://expertTranscriptHelper.com" />
         <link
           rel="preconnect"
           href="https://cdn.fontshare.com"
@@ -34,7 +42,7 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,500,700&display=swap"
         />
-      </head>
+        </head>
       <body className="flex min-h-full flex-col">{children}</body>
     </html>
   )

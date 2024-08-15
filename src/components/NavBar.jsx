@@ -5,13 +5,14 @@ import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 import Image from 'next/image'
 import logo from '@/images/Logo.png'
-import { HiOutlineMail } from 'react-icons/hi'
 
 const sections = [
+  { id: 'about-us', title: 'About Us' },
   { id: 'accredited-schools', title: 'Accredited Schools' },
   { id: 'how-it-works', title: 'How It Works' },
   { id: 'why-choose-us', title: 'Why Choose Us' },
-  { id: 'pricing', title: 'Pricing' },
+  { id: 'packages', title: 'Packages' },
+  { id: 'faqs', title: 'Faqs' },
   { id: 'contact', title: 'Contact' },
 ]
 
@@ -121,13 +122,7 @@ export function NavBar() {
                 )}
                 <MenuIcon open={open} className="h-6 w-6 stroke-slate-700" />
               </Popover.Button>
-              <a
-                href="#contact"
-                className="ml-4 flex h-8 w-8 items-center justify-center lg:hidden"
-                aria-label="Contact us"
-              >
-                <HiOutlineMail className="h-6 w-6 text-slate-700" />
-              </a>
+              
             </div>
             <Popover.Panel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur">
               {sections.map((section, sectionIndex) => (
@@ -159,10 +154,7 @@ export function NavBar() {
           className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-base font-medium text-slate-900 [counter-reset:section]"
         >
           <li className="flex items-center [counter-increment:section]">
-            <a
-              href='/'
-              className='px-4 py-2'
-            >
+            <a href="/" className="px-4 py-2">
               <Image
                 src={logo}
                 alt=""
