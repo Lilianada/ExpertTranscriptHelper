@@ -1,9 +1,5 @@
-import clsx from 'clsx'
-
-import { Button } from '@/components/Button'
 import { CheckIcon } from '@/components/CheckIcon'
 import { Container } from '@/components/Container'
-import { GridPattern } from '@/components/GridPattern'
 import { SectionHeading } from '@/components/SectionHeading'
 
 const tiers = [

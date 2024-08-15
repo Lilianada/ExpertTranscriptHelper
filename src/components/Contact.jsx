@@ -35,7 +35,7 @@ export default function Contact() {
 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
 
-    window.location.href = whatsappUrl
+    window.open(whatsappUrl, '_blank') 
   }
 
   return (
