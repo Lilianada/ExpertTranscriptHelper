@@ -1,3 +1,5 @@
+'use client'
+
 import {
   BuildingOffice2Icon,
   ChatBubbleLeftEllipsisIcon,
@@ -7,8 +9,38 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import { SectionHeading } from './SectionHeading'
 import { Container } from './Container'
+import { useState } from 'react'
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phoneNumber: '',
+    message: ''
+  })
+
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }))
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const whatsappNumber = '16616750759'
+
+    const whatsappMessage = `Hello, I'm ${formData.firstName} ${formData.lastName}.\n\nEmail: ${formData.email}\nPhone: ${formData.phoneNumber}\n\nMessage:\n${formData.message}`
+
+    const encodedMessage = encodeURIComponent(whatsappMessage)
+
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+
+    window.location.href = whatsappUrl
+  }
+
   return (
     <section
       id="contact"
@@ -113,15 +145,14 @@ export default function Contact() {
             </div>
           </div>
           <form
-            action="#"
-            method="POST"
+            onSubmit={handleSubmit}
             className="px-6 pb-24 pt-16 sm:pb-32 lg:px-8 lg:py-24"
           >
             <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
                   <label
-                    htmlFor="first-name"
+                    htmlFor="firstName"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     First name
@@ -129,16 +160,18 @@ export default function Contact() {
                   <div className="mt-2.5">
                     <input
                       type="text"
-                      name="first-name"
-                      id="first-name"
+                      name="firstName"
+                      id="firstName"
                       autoComplete="given-name"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div>
                   <label
-                    htmlFor="last-name"
+                    htmlFor="lastName"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Last name
@@ -146,9 +179,11 @@ export default function Contact() {
                   <div className="mt-2.5">
                     <input
                       type="text"
-                      name="last-name"
-                      id="last-name"
+                      name="lastName"
+                      id="lastName"
                       autoComplete="family-name"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -166,13 +201,15 @@ export default function Contact() {
                       name="email"
                       id="email"
                       autoComplete="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <label
-                    htmlFor="phone-number"
+                    htmlFor="phoneNumber"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
                     Phone number
@@ -180,9 +217,11 @@ export default function Contact() {
                   <div className="mt-2.5">
                     <input
                       type="tel"
-                      name="phone-number"
-                      id="phone-number"
+                      name="phoneNumber"
+                      id="phoneNumber"
                       autoComplete="tel"
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                     />
                   </div>
@@ -199,6 +238,8 @@ export default function Contact() {
                       name="message"
                       id="message"
                       rows={4}
+                      value={formData.message}
+                      onChange={handleChange}
                       className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                       defaultValue={''}
                     />

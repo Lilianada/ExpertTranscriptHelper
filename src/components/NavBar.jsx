@@ -5,6 +5,7 @@ import { Popover } from '@headlessui/react'
 import clsx from 'clsx'
 import Image from 'next/image'
 import logo from '@/images/Logo.png'
+import { HiOutlineMail } from 'react-icons/hi'
 
 const sections = [
   { id: 'accredited-schools', title: 'Accredited Schools' },
@@ -82,7 +83,7 @@ export function NavBar() {
 
   return (
     <div ref={navBarRef} className="sticky top-0 z-50">
-      <Popover className="sm:hidden">
+      <Popover className="md:block lg:hidden">
         {({ open }) => (
           <>
             <div
@@ -120,6 +121,13 @@ export function NavBar() {
                 )}
                 <MenuIcon open={open} className="h-6 w-6 stroke-slate-700" />
               </Popover.Button>
+              <a
+                href="#contact"
+                className="ml-4 flex h-8 w-8 items-center justify-center lg:hidden"
+                aria-label="Contact us"
+              >
+                <HiOutlineMail className="h-6 w-6 text-slate-700" />
+              </a>
             </div>
             <Popover.Panel className="absolute inset-x-0 top-0 bg-white/95 py-3.5 shadow-sm [@supports(backdrop-filter:blur(0))]:bg-white/80 [@supports(backdrop-filter:blur(0))]:backdrop-blur">
               {sections.map((section, sectionIndex) => (
@@ -145,7 +153,7 @@ export function NavBar() {
           </>
         )}
       </Popover>
-      <div className="hidden sm:flex sm:h-20 sm:justify-center sm:border-b sm:border-slate-200 sm:bg-white/95 sm:[@supports(backdrop-filter:blur(0))]:bg-white/80 sm:[@supports(backdrop-filter:blur(0))]:backdrop-blur">
+      <div className="hidden lg:flex lg:h-20 lg:justify-center lg:border-b lg:border-slate-200 lg:bg-white/95 lg:[@supports(backdrop-filter:blur(0))]:bg-white/80 lg:[@supports(backdrop-filter:blur(0))]:backdrop-blur">
         <ol
           role="list"
           className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-base font-medium text-slate-900 [counter-reset:section]"
