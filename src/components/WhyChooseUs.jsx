@@ -15,7 +15,7 @@ const resources = [
       'Our experienced advisors provide tailored credit transfer plans, ensuring they align perfectly with your academic goals.',
     image: function GuidanceImage() {
       return (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex justify-start items-center sm:justify-center">
           <Image src={Guidance} alt="" unoptimized className="relative w-32" />
         </div>
       )
@@ -27,7 +27,7 @@ const resources = [
       'Gain access to a vast network of universities that accept ACE accredited credits, maximizing your transfer options and opportunities.',
     image: function CommunityImage() {
       return (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex justify-start items-center sm:justify-center">
           <Image
             className="relative w-32"
             src={Community}
@@ -44,7 +44,7 @@ const resources = [
       "We simplify the complexities of credit transfers, offering a convenient and flexible process that fits your schedule and needs.",
     image: function TimeImage() {
       return (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex justify-start items-center sm:justify-center">
           <Image src={Time} alt="" unoptimized className='w-36'/>
         </div>
       )
@@ -56,7 +56,7 @@ const resources = [
       'Save time and money by accelerating your degree completion through our efficient credit transfer services.',
     image: function WalletImage() {
       return (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex justify-start items-center sm:justify-center">
           <Image src={Wallet} className='w-28' alt="" unoptimized />
         </div>
       )
@@ -68,7 +68,7 @@ const resources = [
       'Receive round-the-clock support, ensuring you have the assistance you need whenever you need it.',
     image: function SupportImage() {
       return (
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 flex justify-start items-center sm:justify-center">
           <Image src={Support} className="w-28" alt="" unoptimized />
         </div>
       )
@@ -99,9 +99,9 @@ export function WhyChooseUs() {
           {resources.map((resource) => (
             <li
               key={resource.title}
-              className="grid auto-rows-min grid-cols-1 items-center gap-8 px-3 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-1 xl:px-12"
+              className="grid auto-rows-min grid-cols-1 items-center gap-4 sm:gap-8 px-3 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-1 xl:px-12"
             >
-              <div className="relative h-48 overflow-hidden  sm:h-60 lg:h-40">
+              <div className="relative h-36 overflow-hidden  sm:h-60 lg:h-40 ">
                 <resource.image />
               </div>
               <div>
