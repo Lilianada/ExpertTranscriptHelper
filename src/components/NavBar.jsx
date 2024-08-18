@@ -96,6 +96,15 @@ export function NavBar() {
             >
               {!open && (
                 <>
+                  <a href="/" className="px-4 py-2">
+                    <Image
+                      src={logo}
+                      alt=""
+                      width={650}
+                      height={400}
+                      className="h-12 w-14 mr-10 hidden md:flex"
+                    />
+                  </a>
                   <span
                     aria-hidden="true"
                     className="font-mono text-sm text-indigo-600"
@@ -109,7 +118,7 @@ export function NavBar() {
               )}
               <Popover.Button
                 className={clsx(
-                  '-mr-1 ml-auto flex h-8 w-8 items-center justify-center',
+                  '-mr-1 ml-auto flex h-8 w-8 md:w-10 items-center justify-center',
                   open && 'relative z-10',
                 )}
                 aria-label="Toggle navigation menu"
@@ -120,7 +129,7 @@ export function NavBar() {
                     <span className="absolute inset-0" />
                   </>
                 )}
-                <MenuIcon open={open} className="h-6 w-6 stroke-slate-700" />
+                <MenuIcon open={open} className="h-6 w-6 md:w-8 stroke-slate-700" />
               </Popover.Button>
               
             </div>
@@ -151,7 +160,7 @@ export function NavBar() {
       <div className="hidden lg:flex lg:h-20 lg:justify-center lg:border-b lg:border-slate-200 lg:bg-white/95 lg:[@supports(backdrop-filter:blur(0))]:bg-white/80 lg:[@supports(backdrop-filter:blur(0))]:backdrop-blur">
         <ol
           role="list"
-          className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col text-base font-medium text-slate-900 [counter-reset:section]"
+          className="mb-[-2px] grid auto-cols-[minmax(0,15rem)] grid-flow-col lg:text-sm xl:text-base font-medium text-slate-900 [counter-reset:section]"
         >
           <li className="flex items-center [counter-increment:section]">
             <a href="/" className="px-4 py-2">
@@ -160,7 +169,7 @@ export function NavBar() {
                 alt=""
                 width={640}
                 height={400}
-                className="h-12 w-12 "
+                className="h-12 w-12"
               />
             </a>
           </li>
