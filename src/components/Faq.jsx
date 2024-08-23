@@ -28,7 +28,7 @@ export default function Faq() {
         'Absolutely! To protect your privacy, we take extreme measures at all times. We are devoted to protecting your privacy and will never share any of your personal information. We value your confidence and respect for your privacy deeply.',
     },
     {
-      question: 'What Would the Scores Be?',
+      question: 'What would the scores be?',
       answer:
         'The scores for your completed courses will be between 80% to 100%. Our goal is to ensure you achieve the highest possible grades, demonstrating a strong understanding and mastery of the course material.',
     },
