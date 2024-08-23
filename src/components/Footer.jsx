@@ -7,7 +7,7 @@ export function Footer() {
         <GridPattern x="50%" />
       </div>
       <div className="relative text-center text-sm text-slate-600">
-        <p>Copyright &copy; {new Date().getFullYear()} Building Bloques Creative Studio</p>
+        <p>Copyright &copy;{new Date().getFullYear()} Expert Transcript Helpers.</p>
         <p>All rights reserved.</p>
       </div>
     </footer>
