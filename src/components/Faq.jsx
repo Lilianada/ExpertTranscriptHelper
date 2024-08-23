@@ -13,12 +13,12 @@ export default function Faq() {
 
   const faqs = [
     {
-      question: 'How Do I Know My Courses Are Being Completed?',
+      question: 'How do I know my courses are being completed?',
       answer:
         'You will receive a Credly badge for every course completed, sent directly to your email. This allows you to keep track of your progress easily and ensures you have a record of each completed course.',
     },
     {
-      question: 'Can I Access the Account While You Take the Courses?',
+      question: 'Can I access the account while you take the courses?',
       answer:
         'We do not advise accessing the account during the time we are completing your courses. Doing so could risk getting the account banned due to multiple simultaneous logins or conflicting activities.',
     },
